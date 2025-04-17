@@ -1,0 +1,12 @@
+--- a/make_piqp.m
++++ b/make_piqp.m
+@@ -45,7 +45,7 @@ current_dir = pwd;
+ [piqp_octave_dir,~,~] = fileparts(which('make_piqp.m'));
+ if exist(fullfile(piqp_octave_dir, 'src'))
+     piqp_dir = fullfile(piqp_octave_dir, 'src/piqp');
+-    eigen_include_dir = fullfile(piqp_octave_dir, 'src/eigen');
++    eigen_include_dir = '/usr/include/eigen3';
+ else
+     piqp_dir = fullfile(piqp_octave_dir, '../..');
+     eigen_include_dir = '/usr/local/include/eigen3';
+
