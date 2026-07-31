@@ -6,7 +6,7 @@
 
 Summary:	PIQP is a Proximal Interior Point Quadratic Programming solver, which can solve
 Name:		octave-piqp
-Version:	0.5.0
+Version:	0.6.2
 Release:	1
 License:	BSD-2-Clause
 Group:		Sciences/Mathematics
@@ -23,7 +23,7 @@ Requires(post): octave
 Requires(postun): octave
 
 %patchlist
-octave-piqp-0.5.0-use_system_eigen.patch
+# dropped (no longer applies): octave-piqp-0.6.2-use_system_eigen.patch
 
 %description
 PIQP is a Proximal Interior Point Quadratic Programming solver, which 
@@ -41,7 +41,7 @@ can solve dense and sparse quadratic programs.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{octpkg}-octave
+%autosetup -p1 -n piqp-octave
 sed -i -e "s,gnu++14,gnu++20,g" make_piqp.m
 
 %build
